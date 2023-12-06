@@ -1,13 +1,10 @@
-DAY 1 - 12 nov
-  1 successfull build , 
-  1 video of aws
 
-DAy 2 - 13 nov
-    * 1 successfull build 
-    * 2 videos of AWS 
-    * 1 more sucessfull build 
+to install maven - sudo wget apache-maven-3.8.4-bin.tar.gz
+now untar(unzip) a file -  tar -xvf apache-maven-3.9.6-bin.tar.gz
 
- Day 3 
-    * 
-    *
 
+to print environment variables -->
+    printenv --> to print all
+    echo ${name} --> to print specific // e.g echo $java_home
+    sudo vi /etc/profile ----> to open file and write envir variable  /e.g write maven_home=. . . (same as java )
+    source /etc/profile ---> to load environment variables.
