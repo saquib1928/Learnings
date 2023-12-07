@@ -1,10 +1,21 @@
+1. Download maven
+wget <url>/apache-maven-3.8.4-bin.tar.gz
 
-to install maven - sudo wget apache-maven-3.8.4-bin.tar.gz
-now untar(unzip) a file -  tar -xvf apache-maven-3.9.6-bin.tar.gz
+2. Untar and unzip the tar file
+tar -xvf apache-maven-3.9.6-bin.tar.gz
 
+3. Configure MAVEN_HOME environment variable.
+Option 1:
+export MAVEN_HOME="/home/ec2-user/apache-maven-3.9.6
+export JAVA_HOME="/home/ec2-user/jdk-11.0.0.1"
+export PATH="$MAVEN_HOME/bin:$PATH"
+export PATH="/home/ec2-user/git-2.43.0/bin:$PATH"
+export PATH="$JAVA_HOME/bin:$PATH"
 
-to print environment variables -->
-    printenv --> to print all
-    echo ${name} --> to print specific // e.g echo $java_home
-    sudo vi /etc/profile ----> to open file and write envir variable  /e.g write maven_home=. . . (same as java )
-    source /etc/profile ---> to load environment variables.
+Option 2: Whenever the shell is going to open all these commmands will be executed automatically.
+script /etc/profile
+export MAVEN_HOME="/home/ec2-user/apache-maven-3.9.6
+export JAVA_HOME="/home/ec2-user/jdk-11.0.0.1"
+export PATH="$MAVEN_HOME/bin:$PATH"
+export PATH="/home/ec2-user/git-2.43.0/bin:$PATH"
+export PATH="$JAVA_HOME/bin:$PATH"
