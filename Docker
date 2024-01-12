@@ -22,7 +22,18 @@ docker exec -it <container id> <command> : to enter into a running container and
 docker start <container id> : to start a container.
 docker stop <container id> :  to stop a container.
 
-	DOCKER FILE -->
+	To RUN A APPLICATION ON A NEW HOST  
 
+apt-get update 
+apt-get install -y python3
+apt-get install python3-pip
+pip install flask 
+create/copy application code to /opt/app.py
+
+FLASK_APP=/opt/app.py flask run --host=0.0.0.0
+
+
+          DOCKER FILE -->
+                      
 docker build . --> to build an image
 docker build -t <image name> --> to build an image and give image name
