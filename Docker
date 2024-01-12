@@ -12,6 +12,7 @@ docker logs <container id> : to view container logs.
 docker history <image name> : to view image logs.
 
 docker run <image name>: to run an image.
+docker run -d centos sleep 20 : container will sleep for 20 sec and will get shut down after 20 sec
 docker run -it <image name> : to run an image in interactive mode and open terminal.
 docker run -d <image name> : to run an image in detach mode.
 docker run -p <port>:<container port> -- to configure a port to a container.
