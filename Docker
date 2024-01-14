@@ -37,3 +37,11 @@ FLASK_APP=/opt/app.py flask run --host=0.0.0.0
                       
 docker build . --> to build an image
 docker build -t <image name> --> to build an image and give image name
+
+TO MAP A FILE FROM LOCAL TO SERVER CONATINER 
+winpty docker run --name cont2 -it -v //c/docker:/home ubuntu
+run - creating a container 
+--name (cont2)- naming a conatiner (cont2)
+-it - interactive mode 
+//c/docker:/home - where to map a file in a container 
+ubuntu - image name 
