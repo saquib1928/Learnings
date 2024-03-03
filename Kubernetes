@@ -1,0 +1,7 @@
+kubectl get pods      --------------------------------------------Total Pods exist on the system 
+kubectl run <pod/deployement name> --image=<imagename>------------create pod with the (any)image 
+kubectl descibe pod <podname>    ---------------------------------descibe pod details 
+kubectl delete pod <podname>     ---------------------------------delete pod 
+kubectl run <pod/deployement name> --image=<imagename> --dry-run -o yaml
+kubectl edit pod <podname>
+
