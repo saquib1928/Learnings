@@ -21,4 +21,15 @@ kubectl create deployment my-dep --image=nginx --replicas=3---------------Create
 kubectl create deployment my-dep --image=nginx --port=5701---------------- "                          "           "              " and EXPOSES PORT 5701
 kubectl get pod —namespace=“name”	..........................................To know the pods present in another namespace
 kubectl create -f namespace-dev.yml..........................................To create a namespace
+kubectl create namespace <nameofnamespacde>....................................another command to create namespace
+
+kubectl config set-context $(kubectl config current-context) —namespace=“name”
+                           ....................To switch to a different namespace permanently (it first checks the current context and then switches to the desired one)
+
+kubectl get namespaces -----------------------To get all the namespaces 
+kubectl get pods --all-namespaces -----------------------get pods in all namespaces
+kubectl get pods -n=finance ------------------------------Create a POD in the finance namespace
+kubectl get pods --all-namespaces-------------------------Get pods in all namespaces
+
+
 
