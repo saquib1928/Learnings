@@ -31,6 +31,8 @@ kubectl get pods --all-namespaces -----------------------get pods in all namespa
 kubectl get pods -n=finance ------------------------------Create a POD in the finance namespace
 kubectl get pods --all-namespaces-------------------------Get pods in all namespaces
 kubectl run redis --image=redis:alpine --labels="tier=db"-------------------Deploy a redis pod using the redis:alpine
+kubectl create deployment redis-deploy --image=redis --replicas=2 -n dev-ns----------creating new Deployment --> image --> replica --> namespaces
+kubectl run httpd --image=httpd:alpine --port=80 --expose=true --------------------- create pod (httpd) --> image(httpd:alpine) --> targetport (80)
 
 
 
