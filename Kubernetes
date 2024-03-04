@@ -4,4 +4,21 @@ kubectl descibe pod <podname>    ---------------------------------descibe pod de
 kubectl delete pod <podname>     ---------------------------------delete pod 
 kubectl run <pod/deployement name> --image=<imagename> --dry-run -o yaml
 kubectl edit pod <podname>
+kubectl create -f deployment.yaml  OR -f service.yaml  OR  -f configmap.yaml 
+                                              -------------------This command would create a Deployment, a Service, and a ConfigMap, as defined in the respective YAML files.
+                                              kubectl create -f is a convenient way to create Kubernetes resources in bulk from configuration files.
+kubectl explain replicaset  ---------------------------  to display documentation for Kubernetes resources
+ kubectl scale --replicas=6 -f <file name>.................................	To change the number of replicas. ( yaml file is replaced )
+kubectl scale --replicas=6 <replicaset> <name>.............................	To change the number of replicas. ( Does not replace the yaml file )
+kubectl get nodes -o wide	--------------------------------------------------To know the information about the nodes.
+kubectl logs -f <pod name> <container name>	................................To know the logs of the container. ( if multiple containers in the pod ).
+Kubectl logs -f <pod name >	................................................To know the logs of the pod. (-f shows live logs )
+kubectl scale rs <replicasetname> --replicas=5-----------used to scale the number of replicas in a ReplicaSet to 5.
+kubectl get all -------------------------- to get all created object as onces  (deployment --> Replica Sets --> Pods
+kuebctl create -f deployment (create deployment) --> kubectl get deployments (to check newly created deployment)  --> (deploymment create replica set, check rs (kubectl get replicaset
+----------------------> (rs create pods) kuvectl getpods 
+kubectl create deployment my-dep --image=nginx --replicas=3---------------Create a deployment named MY-DEP , that runs on NGINX image with 3 REPLICAS
+kubectl create deployment my-dep --image=nginx --port=5701---------------- "                          "           "              " and EXPOSES PORT 5701
+kubectl get pod —namespace=“name”	..........................................To know the pods present in another namespace
+kubectl create -f namespace-dev.yml..........................................To create a namespace
 
