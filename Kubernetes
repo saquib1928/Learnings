@@ -30,6 +30,8 @@ kubectl get namespaces -----------------------To get all the namespaces
 kubectl get pods --all-namespaces -----------------------get pods in all namespaces
 kubectl get pods -n=finance ------------------------------Create a POD in the finance namespace
 kubectl get pods --all-namespaces-------------------------Get pods in all namespaces
+kubectl run redis --image=redis:alpine --labels="tier=db"-------------------Deploy a redis pod using the redis:alpine
+
 
 
 
